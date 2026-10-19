@@ -225,3 +225,134 @@ nav a:hover {
 </style>
 </head>
 <body>
+<header class="header">
+  <div class="container nav">
+    <a class="logo" href="#">📚 Bire Books</a>
+    <nav class="nav-links">
+      <a href="#home">Mana</a>
+      <a href="#books">Kitaabota</a>
+      <a href="#about">Waa'ee Keenya</a>
+      <a href="#contact">Nu Qunnamaa</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="container hero-content">
+      <div>
+        <span class="eyebrow">📖 Addunyaa Beekumsaa</span>
+        <h1>Kitaaba Dubbisi,<br />
+          <span>Beekumsa Guddisi.</span>
+        </h1>
+        <p>
+          Baga gara Bire Books dhuftan! Kitaabota filatamoo
+          dubbisaa, kitaabota haaraa barbaadaa, PDF kitaabota
+          keessaniis bakka tokkotti argadhaa.
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#books">Kitaabota Ilaali</a>
+          <a class="btn btn-outline" href="#about">Waa'ee Keenya</a>
+        </div>
+      </div>
+      <div class="hero-book">
+        <div class="book-cover">
+          <span>📚</span>
+          <h2>BIRE<br />BOOKS</h2>
+          <p>Beekumsi Humna Dha</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="container search-section" id="books">
+    <div class="section-heading">
+      <span class="eyebrow">Kitaabota Keenya</span>
+      <h2>Kitaaba Siif Ta'u Barbaadi</h2>
+      <p>Kitaaba barbaaddu maqaa isaatiin barbaadi.</p>
+    </div>
+
+    <div class="search-area">
+      <input
+        type="search"
+        id="bookSearch"
+        placeholder="Maqaa kitaabaa barreessi..."
+        aria-label="Kitaaba barbaadi"
+      />
+      <select id="categoryFilter" aria-label="Gosa kitaabaa filadhu">
+        <option value="all">Gosa Hunda</option>
+        <option value="Amantii">Amantii</option>
+        <option value="Barnoota">Barnoota</option>
+        <option value="Jireenya">Jireenya</option>
+        <option value="Seenaa">Seenaa</option>
+      </select>
+    </div>
+
+    <div class="book-grid" id="bookGrid">
+      <article class="book-card" data-category="Amantii">
+        <div class="book-art art-blue">
+          <span>✝️</span>
+          <h3>Jaalala Waaqayyoo</h3>
+          <p>BIRE BOOKS</p>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Amantii</span>
+          <h3>Jaalala Waaqayyoo</h3>
+          <p>Waa'ee jaalala Waaqayyoo baradhu.</p>
+          <a class="btn btn-primary btn-small"
+             href="#contact">Kitaaba Gaafadhu</a>
+        </div>
+      </article>
+
+      <article class="book-card" data-category="Barnoota">
+        <div class="book-art art-gold">
+          <span>🎓</span>
+          <h3>Beekumsa</h3>
+          <p>BIRE BOOKS</p>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Barnoota</span>
+          <h3>Beekumsa fi Barumsa</h3>
+          <p>Barumsa kee cimsachuuf kitaaba dubbisi.</p>
+          <a class="btn btn-primary btn-small"
+             href="#contact">Kitaaba Gaafadhu</a>
+        </div>
+      </article>
+
+      <article class="book-card" data-category="Jireenya">
+        <div class="book-art art-green">
+          <span>🌱</span>
+          <h3>Jireenya Gaarii</h3>
+          <p>BIRE BOOKS</p>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Jireenya</span>
+          <h3>Jireenya Fooyya'aa</h3>
+          <p>Yaada gaarii fi guddina dhuunfaa.</p>
+          <a class="btn btn-primary btn-small"
+             href="#contact">Kitaaba Gaafadhu</a>
+        </div>
+      </article>
+
+      <article class="book-card" data-category="Seenaa">
+        <div class="book-art art-purple">
+          <span>📜</span>
+          <h3>Seenaa</h3>
+          <p>BIRE BOOKS</p>
+        </div>
+        <div class="book-info">
+          <span class="book-category">Seenaa</span>
+          <h3>Seenaa fi Aadaa</h3>
+          <p>Seenaa fi aadaa keenya hubadhu.</p>
+          <a class="btn btn-primary btn-small"
+             href="#contact">Kitaaba Gaafadhu</a>
+        </div>
+      </article>
+    </div>
+
+    <p class="no-results" id="noResults" hidden>
+      Kitaabni ati barbaadde hin argamne.
+    </p>
+  </section>
+</main>
+
