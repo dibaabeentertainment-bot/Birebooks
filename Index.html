@@ -355,4 +355,90 @@ nav a:hover {
     </p>
   </section>
 </main>
+<section class="about-section" id="about">
+  <div class="container about-content">
+    <div class="about-icon">📚</div>
+    <div>
+      <span class="eyebrow">Waa'ee Bire Books</span>
+      <h2>Beekumsa Biyyaaf, Kitaaba Namaaf.</h2>
+      <p>
+        Bire Books bakka kitaabota itti argatan, itti dubbisan
+        fi kitaabota PDF itti qooddatan ta'uuf qophaa'e.
+        Kaayyoon keenya aadaa dubbisuu guddisuu fi beekumsa
+        namootaaf dhiyeessuudha.
+      </p>
+      <ul class="about-list">
+        <li>✓ Kitaabota gosa garaagaraa</li>
+        <li>✓ Kitaabota PDF yeroo itti dabalaman</li>
+        <li>✓ Bilbilaafi kompiitaraan fayyadamuuf mijataa</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="contact-section" id="contact">
+  <div class="container contact-box">
+    <span class="eyebrow">Nu Qunnamaa</span>
+    <h2>Kitaaba barbaaddu qabdaa?</h2>
+    <p>
+      Kitaaba bitachuu, PDF gaafachuu ykn kitaaba haaraa
+      akka dabalamu yaada dhiyeessuuf nu qunnami.
+    </p>
+    <a class="btn btn-primary"
+       href="https://t.me/bire1bot"
+       target="_blank"
+       rel="noopener noreferrer">
+      Telegram irratti Nu Qunnami
+    </a>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container footer-content">
+    <a class="logo footer-logo" href="#home">📚 Bire Books</a>
+    <p>© <span id="currentYear"></span> Bire Books. Mirgi hundi eegama.</p>
+    <a href="#home">Gara Olitti ↑</a>
+  </div>
+</footer>
+
+<script>
+  const searchInput = document.getElementById("bookSearch");
+  const categoryFilter = document.getElementById("categoryFilter");
+  const bookCards = document.querySelectorAll(".book-card");
+  const noResults = document.getElementById("noResults");
+
+  function filterBooks() {
+    const searchText = searchInput.value.toLowerCase().trim();
+    const selectedCategory = categoryFilter.value;
+    let visibleCount = 0;
+
+    bookCards.forEach(function(card) {
+      const text = card.textContent.toLowerCase();
+      const category = card.dataset.category;
+
+      const matchesSearch = text.includes(searchText);
+      const matchesCategory =
+        selectedCategory === "all" ||
+        category === selectedCategory;
+
+      if (matchesSearch && matchesCategory) {
+        card.hidden = false;
+        visibleCount++;
+      } else {
+        card.hidden = true;
+      }
+    });
+
+    noResults.hidden = visibleCount !== 0;
+  }
+
+  searchInput.addEventListener("input", filterBooks);
+  categoryFilter.addEventListener("change", filterBooks);
+
+  document.getElementById("currentYear").textContent =
+    new Date().getFullYear();
+</script>
+</body>
+</html>
+
 
